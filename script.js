@@ -4,18 +4,24 @@ const secondWord ='World';
 const text = `${firstWord}, ${secondWord}`;
 
 //2
-const multiply = (a, b = 1) => console.log(a * b);
+const multiply = (a, b = 1) => a * b;
+
+console.log(multiply(2, 3));
+console.log(multiply(155));
 
 //3
 const average = (...args) => {
   let sum = 0;
   args.forEach(arg => sum += arg/args.length);
-  return console.log(sum);
+  return sum;
 }
+
+console.log(average(1, 2, 3));
+console.log(average(20, 40));
 
 //4
 const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
-average(...grades);
+console.log(average(...grades));
 
 //5
 const strange = [1, 4, 'Iwona', false, 'Nowak'];

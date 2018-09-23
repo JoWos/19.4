@@ -8,8 +8,11 @@ var text = firstWord + ', ' + secondWord;
 //2
 var multiply = function multiply(a) {
   var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-  return console.log(a * b);
+  return a * b;
 };
+
+console.log(multiply(2, 3));
+console.log(multiply(155));
 
 //3
 var average = function average() {
@@ -21,12 +24,15 @@ var average = function average() {
   args.forEach(function (arg) {
     return sum += arg / args.length;
   });
-  return console.log(sum);
+  return sum;
 };
+
+console.log(average(1, 2, 3));
+console.log(average(20, 40));
 
 //4
 var grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
-average.apply(undefined, grades);
+console.log(average.apply(undefined, grades));
 
 //5
 var strange = [1, 4, 'Iwona', false, 'Nowak'];
