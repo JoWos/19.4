@@ -10,11 +10,7 @@ console.log(multiply(2, 3));
 console.log(multiply(155));
 
 //3
-const average = (...args) => {
-  let sum = 0;
-  args.forEach(arg => sum += arg/args.length);
-  return sum;
-}
+const average = (...args) => args.reduce((x, y) => x + y)/args.length;
 
 console.log(average(1, 2, 3));
 console.log(average(20, 40));
